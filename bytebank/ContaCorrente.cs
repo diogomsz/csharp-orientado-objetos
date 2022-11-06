@@ -5,7 +5,7 @@
         public int numeroAgencia;
         public string conta;
         public double saldo;
-        public string titular;
+        public Cliente titular;
 
         public void Depositar(double valor)
         {

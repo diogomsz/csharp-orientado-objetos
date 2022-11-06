@@ -4,25 +4,25 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        ContaCorrente contaDoAndre = new ContaCorrente();
-        contaDoAndre.titular = "André Silva";
-        contaDoAndre.numeroAgencia = 15;
-        contaDoAndre.conta = "1010-X";
-        contaDoAndre.saldo = 100;
+        //ContaCorrente contaDoAndre = new ContaCorrente();
+        //contaDoAndre.titular = "André Silva";
+        //contaDoAndre.numeroAgencia = 15;
+        //contaDoAndre.conta = "1010-X";
+        //contaDoAndre.saldo = 100;
 
-        Console.WriteLine("Saldo da conta do André: " + contaDoAndre.saldo);
+        //Console.WriteLine("Saldo da conta do André: " + contaDoAndre.saldo);
 
-        ContaCorrente contaDoAndre2 = new ContaCorrente();
-        contaDoAndre2.titular = "André Silva";
-        contaDoAndre2.numeroAgencia = 15;
-        contaDoAndre2.conta = "1010-X";
-        contaDoAndre2.saldo = 100;
+        //ContaCorrente contaDoAndre2 = new ContaCorrente();
+        //contaDoAndre2.titular = "André Silva";
+        //contaDoAndre2.numeroAgencia = 15;
+        //contaDoAndre2.conta = "1010-X";
+        //contaDoAndre2.saldo = 100;
 
-        Console.WriteLine("Saldo da conta do André: " + contaDoAndre2.saldo);
+        //Console.WriteLine("Saldo da conta do André: " + contaDoAndre2.saldo);
 
-        contaDoAndre = contaDoAndre2;
+        //contaDoAndre = contaDoAndre2;
 
-        Console.WriteLine(contaDoAndre == contaDoAndre2);
+        //Console.WriteLine(contaDoAndre == contaDoAndre2);
 
         //ContaCorrente contaDaMaria = new ContaCorrente();
         //contaDaMaria.titular = "Maria Souza";
@@ -49,6 +49,23 @@ internal class Program
         //Console.WriteLine(valor1);
         //Console.WriteLine(valor2);
 
+        Cliente cliente = new Cliente();
+        cliente.nome = "André Souza";
+        cliente.cpf = "12345678900";
+        cliente.profissao = "Analista";
+
         ContaCorrente conta = new ContaCorrente();
+        conta.titular = cliente;
+        conta.conta = "1010-X";
+        conta.numeroAgencia = 15;
+        conta.saldo = 100;
+
+        Console.WriteLine("Titular: {0}", cliente.nome);
+        Console.WriteLine("CPF: {0}", cliente.cpf);
+        Console.WriteLine("Profissão: {0}", cliente.profissao);
+
+        Console.WriteLine("Nº da conta: {0}", conta.conta);
+        Console.WriteLine("Nº da agência: {0}", conta.numeroAgencia);
+        Console.WriteLine("Saldo atual: {0}", conta.saldo);
     }
 }
