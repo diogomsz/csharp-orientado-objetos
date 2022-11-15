@@ -1,4 +1,5 @@
-﻿using bytebank;
+﻿using bytebank.Contas;
+using bytebank.Titular;
 
 internal class Program
 {
@@ -49,23 +50,41 @@ internal class Program
         //Console.WriteLine(valor1);
         //Console.WriteLine(valor2);
 
-        Cliente cliente = new Cliente();
-        cliente.nome = "André Souza";
-        cliente.cpf = "12345678900";
-        cliente.profissao = "Analista";
+        //cliente.nome = "André Souza";
+        //cliente.cpf = "12345678900";
+        //cliente.profissao = "Analista";
 
-        ContaCorrente conta = new ContaCorrente();
-        conta.titular = cliente;
-        conta.conta = "1010-X";
-        conta.numeroAgencia = 15;
-        conta.saldo = 100;
+        //ContaCorrente conta = new ContaCorrente();
+        //conta.titular = cliente;
+        //conta.conta = "1010-X";
+        //conta.numeroAgencia = 15;
+        //conta.saldo = 100;
 
-        Console.WriteLine("Titular: {0}", cliente.nome);
-        Console.WriteLine("CPF: {0}", cliente.cpf);
-        Console.WriteLine("Profissão: {0}", cliente.profissao);
+        //Console.WriteLine("Titular: {0}", cliente.nome);
+        //Console.WriteLine("CPF: {0}", cliente.cpf);
+        //Console.WriteLine("Profissão: {0}", cliente.profissao);
 
-        Console.WriteLine("Nº da conta: {0}", conta.conta);
-        Console.WriteLine("Nº da agência: {0}", conta.numeroAgencia);
-        Console.WriteLine("Saldo atual: {0}", conta.saldo);
+        //Console.WriteLine("Nº da conta: {0}", conta.conta);
+        //Console.WriteLine("Nº da agência: {0}", conta.numeroAgencia);
+        //Console.WriteLine("Saldo atual: {0}", conta.saldo);
+
+        //ContaCorrente conta2 = new ContaCorrente();
+        //conta2.titular = new Cliente();
+        //conta2.titular.nome = "José Souza";
+        //conta2.titular.profissao = "Tester";
+        //conta2.titular.cpf = "74839476340";
+        //conta2.conta = "9999-X";
+        //conta2.numeroAgencia = 18;
+        //conta2.saldo = 500;
+
+        //Console.WriteLine(conta2.titular.nome);
+
+        ContaCorrente conta3 = new ContaCorrente();
+        conta3.Conta = "1011-H";
+
+        conta3.SetSaldo(200);
+        Console.WriteLine(conta3.GetSaldo());
+        Console.WriteLine(conta3.NumeroAgencia);
+        Console.WriteLine(conta3.Conta);
     }
 }
